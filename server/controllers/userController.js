@@ -19,6 +19,7 @@ exports.create = function(req, res) {
     fname: req.body.fname,
     lname: req.body.lname,
     email: req.body.email,
+    password: req.body.password,
     distGoal: req.body.distGoal,
     progress: req.body.progress,
     dateComplete: req.body.dateComplete

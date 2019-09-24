@@ -3,6 +3,7 @@ const router = express.Router();
 const { list, create } = require("../controllers/userController");
 
 router.get("/", list);
+// router.get("/", login);
 // router.get("/comments/:id", show);
 router.post("/", create);
 // router.put("/comments/:id", update);
