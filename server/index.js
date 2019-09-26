@@ -4,13 +4,23 @@ const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
+const userRoutes = require("./routes/userRoutes");
+const loginRoutes = require("./routes/loginRoutes");
+const runGoalRoutes = require("./routes/runningGoalRoutes");
 // const keys = require("./config/keys");
 // const passport = require("passport");
 // let GoogleStrategy = require("passport-google-oath").OAuth2Strategy;
-
 // const session = require("express-session");
 
-// *******Ignore GoogleAuthO attempt*********/
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+
+app.use("/users", userRoutes);
+app.use("/login", loginRoutes);
+app.use("/rungoal", runGoalRoutes);
+
+// **************Ignore GoogleAuthO attempt*********/
 // passport.use(
 //   new GoogleStrategy(
 //     {
@@ -30,11 +40,6 @@ const cookieParser = require("cookie-parser");
 //     scope: ["profile", "email"]
 //   })
 // );
-
-const userRoutes = require("./routes/userRoutes");
-const loginRoutes = require("./routes/loginRoutes");
-const runGoalRoutes = require("./routes/runningGoalRoutes");
-
 // passport.serializeUser(function(user, done) {
 //   done(null, user.id);
 // });
@@ -44,27 +49,12 @@ const runGoalRoutes = require("./routes/runningGoalRoutes");
 //     done(err, user);
 //   });
 // });
+//***********************End of googleauth attempt */
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-
-// app.use(session());
-// // Express Session
-// app.use(
-//   session({
-//     secret: "secret",
-//     saveUninitialized: true,
-//     resave: true
-//   })
-// );
-
-//********Passport Init**********/
+//********Passport Ignore**********/
 // app.use(passport.initialize());
 // app.use(passport.session());
-app.use("/users", userRoutes);
-app.use("/login", loginRoutes);
-app.use("/rungoal", runGoalRoutes);
+
 // // Endpoint to login
 // app.post("/login", passport.authenticate("local"), function(req, res) {
 //   res.send(req.user);
@@ -80,13 +70,6 @@ app.use("/rungoal", runGoalRoutes);
 //   req.logout();
 //   res.send(null);
 // });
-
-app.use(express.static("public"));
-
-mongoose.connect(
-  "mongodb+srv://alaynapuck28:horseshoe2@cluster0-3umzc.mongodb.net/runningapp",
-  { useNewUrlParser: true }
-);
 
 // var LocalStrategy = require("passport-local").Strategy;
 // passport.use(
@@ -107,12 +90,17 @@ mongoose.connect(
 //     });
 //   })
 // );
+//********Passport Ignore**********/
 
-// app.use("/users", userRoutes);
+app.use(express.static("public"));
+
+mongoose.connect(
+  "mongodb+srv://alaynapuck28:horseshoe2@cluster0-3umzc.mongodb.net/runningapp",
+  { useNewUrlParser: true }
+);
 
 // mongoose.set("debug", true);
 // mongoose.Promise = global.Promise;
-// mongoose.connect("mongodb://localhost/runningapp");
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
