@@ -7,6 +7,18 @@ exports.list = function(req, res) {
   });
 };
 
+// let example = new Login({
+//   email: "erin@aca.com",
+//   name: "Erin",
+//   password: "password"
+// });
+
+// example.save(function(err, fluffy) {
+//   if (err) {
+//     return console.error(err);
+//   }
+// });
+
 // exports.show = function show(req, res) {
 //   let id = req.params.id;
 //   let commentsID = users.find(p => p["_id"] == id);

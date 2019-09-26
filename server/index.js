@@ -33,7 +33,7 @@ const cookieParser = require("cookie-parser");
 
 const userRoutes = require("./routes/userRoutes");
 const loginRoutes = require("./routes/loginRoutes");
-// const loginRoutes = require("./routes/loginRoutes");
+const runGoalRoutes = require("./routes/runningGoalRoutes");
 
 // passport.serializeUser(function(user, done) {
 //   done(null, user.id);
@@ -64,6 +64,7 @@ app.use(cookieParser());
 // app.use(passport.session());
 app.use("/users", userRoutes);
 app.use("/login", loginRoutes);
+app.use("/rungoal", runGoalRoutes);
 // // Endpoint to login
 // app.post("/login", passport.authenticate("local"), function(req, res) {
 //   res.send(req.user);

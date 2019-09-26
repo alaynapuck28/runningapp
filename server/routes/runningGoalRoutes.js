@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { list, create } = require("../controllers/loginController");
+const { list, create } = require("../controllers/runningGoalController");
 
 router.get("/", list);
 
