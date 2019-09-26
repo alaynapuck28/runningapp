@@ -1,5 +1,12 @@
 const express = require("express");
 const router = express.Router();
-module.exports = router;
+const { list, create } = require("../controllers/loginController");
 
-// module.exports = router;
+router.get("/", list);
+// router.get("/", login);
+// router.get("/comments/:id", show);
+// router.post("/", create);
+// router.put("/comments/:id", update);
+// router.delete("/comments/:id", remove);
+
+module.exports = router;
