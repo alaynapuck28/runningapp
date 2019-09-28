@@ -1,22 +1,69 @@
+* {
+  font-size: 1.1rem;
+}
+
+html,
+body {
+  height: 100%;
+  background: #ececec;
+}
+
 .App {
   text-align: center;
+  margin: auto;
+  max-width: 350px;
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 19px 2px rgba(173, 173, 173, 1);
+  -moz-box-shadow: 0px 0px 19px 2px rgba(173, 173, 173, 1);
+  box-shadow: 0px 0px 19px 2px rgba(173, 173, 173, 1);
+  border-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-}
+/* header section */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header {
+  background: #009bd1;
   color: white;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: left;
+  align-items: center;
+  padding: 0 1rem;
 }
 
-.App-link {
-  color: #09d3ac;
+.critterIcon {
+  width: 25%;
+  height: auto;
+}
+
+/* main section */
+
+.main {
+  max-width: 500px;
+  padding: 0 1rem;
+}
+
+.critterPlant {
+  max-width: 75%;
+  height: auto;
+}
+
+.form-control {
+  margin: 1rem auto;
+}
+
+/* sign in section */
+.sign-in {
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Login Page */
+.login {
+  padding-top: 7rem;
 }

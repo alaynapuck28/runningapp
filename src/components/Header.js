@@ -5,14 +5,15 @@ class Header extends Component {
   constructor() {
     super();
   }
-      
+
   render() {
     return (
       <div className="header">
-        <h1>critter</h1><img className="critterIcon" src={critterIcon} />
+        <h1>critter</h1>
+        <img alt="critter" className="critterIcon" src={critterIcon} />
       </div>
     );
   }
 }
 
-export default (Header);
+export default Header;
