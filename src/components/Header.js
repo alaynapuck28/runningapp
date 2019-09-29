@@ -1,19 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
+import { Link } from 'react-router-dom';
 import critterIcon from "../images/critter-icon.png";
 
-class Header extends Component {
-  constructor() {
-    super();
-  }
-
-  render() {
+function Header() {
     return (
-      <div className="header">
-        <h1>critter</h1>
-        <img alt="critter" className="critterIcon" src={critterIcon} />
+      <div>
+        <Link to="/" className="header">
+          <h1>critter</h1>
+          <img alt="critter" className="critterIcon" src={critterIcon} />
+        </Link>
       </div>
     );
-  }
 }
 
 export default Header;
