@@ -19,6 +19,18 @@ exports.list = function(req, res) {
 //   }
 // });
 
+exports.create = function(req, res) {
+  let user = new Login({
+    email: req.body.email,
+    fname: req.body.fname,
+    lname: req.body.lname,
+    password: req.body.password
+  });
+  user.save().then(savedUser => {
+    res.json(savedUser);
+  });
+};
+
 // exports.show = function show(req, res) {
 //   let id = req.params.id;
 //   let commentsID = users.find(p => p["_id"] == id);
@@ -64,17 +76,10 @@ exports.list = function(req, res) {
 //   }
 // };
 
-// exports.create = function(req, res) {
-//   let user = new Login({
-//     fname: req.body.fname,
-//     lname: req.body.lname,
-//     email: req.body.email,
-//     password: req.body.password,
-//     distGoal: req.body.distGoal,
-//     progress: req.body.progress,
-//     dateComplete: req.body.dateComplete
-//   });
-//   user.save().then(savedUser => {
-//     res.json(savedUser);
-//   });
-// };
+// fname: req.body.fname,
+// lname: req.body.lname,
+// email: req.body.email,
+// password: req.body.password,
+// distGoal: req.body.distGoal,
+// progress: req.body.progress,
+// dateComplete: req.body.dateComplete
