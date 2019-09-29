@@ -11,6 +11,7 @@ import MeetPet from "./components/MeetPet";
 import LogARun from "./components/LogARun";
 import "./App.css";
 
+
 class App extends Component {
   
 
@@ -28,6 +29,7 @@ class App extends Component {
         <Route exact path='/meetpet' component={MeetPet}/>
         <Route exact path='/logarun' component={LogARun}/>
       </Router>
+
       </div>
     );
   }

@@ -8,7 +8,12 @@ let loginSchema = new Schema({
     trim: true,
     unique: true
   },
-  name: {
+  fname: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  lname: {
     type: String,
     required: true,
     trim: true
