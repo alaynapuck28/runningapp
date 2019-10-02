@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import Footer from "./Footer";
 
 function MeetPet() {
   return (
@@ -8,6 +9,7 @@ function MeetPet() {
       <Link to="/logarun">
         <button>Log A Run</button>
       </Link>
+      <Footer />
     </div>
   );
       

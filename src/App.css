@@ -144,6 +144,7 @@ input {
 
 .profilePage h2 {
   padding-top: 1rem;
+  font-weight: 600;
 }
 
 .profilePage button {
@@ -166,7 +167,6 @@ input {
 .headshot {
   width: auto;
   height: 100%;
-  margin-left: -25px;
 }
 
 /* Footer */
@@ -184,6 +184,14 @@ input {
   text-align: center;
 }
 
+.footerIcon {
+  padding: 8px;
+}
+
 .footerIcon i, .footerIcon p {
   color: white;
 }
+
+/* .footerIcon p {
+  padding: 5px;
+} */

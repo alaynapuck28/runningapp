@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import Footer from "./Footer";
-import Headshot from '../images/Erin-McBride-Headshot.jpg';
+import Headshot from '../images/headshot-placeholder.png';
 
 function ProfilePage() {
   return (
