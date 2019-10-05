@@ -11,15 +11,14 @@ function ProfilePage() {
       </div>
       <h2>Hello Erin</h2>
       <Link to="/meetpet">
-          <button>View your Goal</button>
+        <button>View your Goal</button>
       </Link>
       <Link to="/createagoal">
-          <button>Create a Goal</button>
+        <button>Create a Goal</button>
       </Link>
       <Footer />
     </div>
   );
-      
 }
 
-export default (ProfilePage);
+export default ProfilePage;

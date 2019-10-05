@@ -12,6 +12,7 @@ function LogIn() {
     </div>
   );
       
+
 }
 
-export default (LogIn);
+export default LogIn;
