@@ -30,7 +30,8 @@ class SignUp extends Component {
     const { redirect } = this.state;
 
     return (
-      <div>
+      <div className="signUpContainer">
+        <p>Please enter in the following information to create your profile:</p>
         <form className="login" onSubmit={this.handleSubmit}>
           First Name:
           <input

@@ -15,13 +15,13 @@ function Footer() {
         </Link>
         </div>
         <div className="footerIcon">
-        <Link to="/logarun">
+        <Link to="/meetpet">
             <i className="fas fa-running"></i><br/><p>Log Run</p>
         </Link>
         </div>
         <div className="footerIcon">
-        <Link to="/">
-            <i className="fas fa-sign-out-alt"></i><br/><p>Sign Out</p>
+        <Link to="/runhistory">
+            <i className="fas fa-history"></i><br/><p>History</p>
         </Link>
         </div>
     </div>

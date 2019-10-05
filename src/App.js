@@ -10,6 +10,7 @@ import MeetPet from "./components/MeetPet";
 import LogARun from "./components/LogARun";
 import LogRun from "./components/LogRun";
 // import Filler from "./components/Filler";
+import RunHistory from "./components/RunHistory";
 import "./App.css";
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
         <Route exact path='/meetpet' component={MeetPet}/>
         <Route exact path='/logarun' component={LogARun}/>
         <Route exact path='/logrun' component={LogRun}/>
+        <Route exact path='/runhistory' component={RunHistory}/>
       </Router>
       </div>
     );

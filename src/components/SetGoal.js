@@ -18,7 +18,7 @@ class SetGoal extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="setGoal">
                 <form onSubmit={(event) => {
                     this.handleSubmit(event);
                     this.setState({ goal: 0, })

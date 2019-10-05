@@ -10,7 +10,7 @@ class LogRun extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="logRun">
                 <form onSubmit={(event) => {
                     this.props.logRun(this.state.goalStatus);
                     event.preventDefault();

@@ -77,10 +77,9 @@ class MeetPet extends React.Component {
         }} >
           <button>Log a Run</button>
         </Link> */}
-
+        <img src={this.state.imgSrc} alt='critter' className="critterImg"></img>
         <SetGoal setGoal={this.setGoal} />
         <LogRun logRun={this.logRun} />
-        <img src={this.state.imgSrc} alt='critter'></img>
         <div className="progress-bar">
           <Filler percentage={this.state.percentage} />
         </div>
