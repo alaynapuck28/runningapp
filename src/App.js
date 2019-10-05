@@ -8,6 +8,8 @@ import LogIn from "./components/LogIn";
 import ProfilePage from "./components/ProfilePage";
 import MeetPet from "./components/MeetPet";
 import LogARun from "./components/LogARun";
+import LogRun from "./components/LogRun";
+// import Filler from "./components/Filler";
 import "./App.css";
 
 class App extends Component {
@@ -23,6 +25,7 @@ class App extends Component {
         <Route exact path='/createagoal' component={CreateAGoal}/>
         <Route exact path='/meetpet' component={MeetPet}/>
         <Route exact path='/logarun' component={LogARun}/>
+        <Route exact path='/logrun' component={LogRun}/>
       </Router>
       </div>
     );

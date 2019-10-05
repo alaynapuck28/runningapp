@@ -11,7 +11,7 @@ function HomePage() {
       </p>
       <input className="form-control" placeholder="Enter Your Email Address" />
       <input className="form-control" placeholder="Create a Password" />
-      <Link to="/login">
+      <Link to="/profilepage">
         <button className="btn btn-primary">Log in</button>
       </Link>
       <div className="sign-in">
