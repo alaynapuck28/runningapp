@@ -20,12 +20,19 @@ class LogRun extends React.Component {
                         let value = Number(event.target.value);
                         this.setState({ goalStatus: value })
                     }}>
-
-                    <input
-                        type="text"
-                        name="goal"
-                    />
-                    <button type="submit">Log a Run</button>
+                    <div className="row">
+                        <div className="col">
+                            <input
+                                className="form-control"
+                                type="text"
+                                name="goal"
+                                placeholder="#"
+                            />
+                        </div>
+                        <div className="col">
+                            <button className="btn btn-primary" type="submit">Log a Run</button>
+                        </div>
+                    </div>
                 </form>
                 <h3>You're logging {this.state.goalStatus} miles today</h3>
             </div>

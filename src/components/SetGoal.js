@@ -30,13 +30,19 @@ class SetGoal extends React.Component {
                         let value = Number(event.target.value);
                         this.setState({ goal: value })
                     }}>
-
-                    <input
-                        className="goalBar"
-                        type="text"
-                        name="goal"
-                    />
-                    <button type="submit">Set Goal</button>
+                    <div className="row">
+                        <div className="col">
+                            <input
+                                className="goalBar form-control"
+                                type="text"
+                                name="goal"
+                                placeholder="#"
+                            />
+                        </div>
+                        <div className="col">
+                            <button className="btn btn-primary" type="submit">Set Goal</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         )

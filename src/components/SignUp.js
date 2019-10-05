@@ -31,6 +31,7 @@ class SignUp extends Component {
 
     return (
       <div className="signUpContainer">
+        <h1>Sign Up</h1>
         <p>Please enter in the following information to create your profile:</p>
         <form className="login" onSubmit={this.handleSubmit}>
           First Name:
@@ -73,7 +74,7 @@ class SignUp extends Component {
               });
             }}
           />
-          <input type="submit" value="save" />
+          <input type="submit" value="Save" />
           {redirect && <Redirect to={from || "/profilepage"} />}
         </form>
       </div>
