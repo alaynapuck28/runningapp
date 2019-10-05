@@ -1,6 +1,7 @@
 // require("dotenv").config();
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -13,6 +14,7 @@ const runGoalRoutes = require("./routes/runningGoalRoutes");
 // const session = require("express-session");
 
 app.use(bodyParser.json());
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
@@ -102,7 +104,7 @@ mongoose.connect(
 // mongoose.set("debug", true);
 // mongoose.Promise = global.Promise;
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 app.listen(port, () => {
   console.log(`Listening on port:${port}`);
 });
