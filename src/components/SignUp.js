@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { Redirect } from "react-router";
 let emptyUser = {
   fname: "",
   lname: "",
@@ -8,7 +9,10 @@ let emptyUser = {
 };
 
 class SignUp extends Component {
-  state = { user: emptyUser };
+  state = {
+    user: emptyUser,
+    redirect: false
+  };
 
   handleSubmit = e => {
     console.log(this.state.user);
@@ -18,9 +22,13 @@ class SignUp extends Component {
       body: JSON.stringify(this.state.user)
     });
     this.setState({ user: emptyUser });
+    this.setState({ redirect: true });
   };
 
   render() {
+    const { from } = this.props.location.state || "/";
+    const { redirect } = this.state;
+
     return (
       <div>
         <form className="login" onSubmit={this.handleSubmit}>
@@ -64,14 +72,12 @@ class SignUp extends Component {
               });
             }}
           />
-          <Link to="/profilepage">
-          <input type="submit" value="submit" />
-          </Link>
+          <input type="submit" value="save" />
+          {redirect && <Redirect to={from || "/profilepage"} />}
         </form>
       </div>
     );
   }
- 
 }
 
 export default SignUp;
